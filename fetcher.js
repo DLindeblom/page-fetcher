@@ -1,9 +1,9 @@
 const args = process.argv.slice(2);
 const fs = require("fs");
 
-let URL = args[0]
+let URL = args[0];
 
-let write = args[1]
+let write = args[1];
 
 const request = require('request');
 request(URL, (error, response, body) => {
@@ -13,7 +13,7 @@ request(URL, (error, response, body) => {
       console.error(err);
     }
     // file written successfully
-    console.log(`Downloaded and saved ${(body.length * 1.5)} bytes to ${write}.`)
+    console.log(`Downloaded and saved ${(body.length * 1.5)} bytes to ${write}.`);
   });
 
 });
